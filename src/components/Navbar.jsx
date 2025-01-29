@@ -1,20 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaApple, FaAndroid, FaBars } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-gradient-to-r from-blue-100 to-white p-6 shadow-md">
+    <nav
+      className={`fixed top-0 left-0 w-full p-6 shadow-md transition-all duration-300 z-50 ${
+        scrolling
+          ? "backdrop-blur-md bg-white/50"
+          : "bg-gradient-to-r from-blue-100 to-white"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex justify-between items-center ps-6">
         <Link to="/" className="flex items-center">
           <img src="logo.svg" alt="Medulla Flashcards Logo" className="h-12" />
         </Link>
         <div className="hidden md:flex space-x-4 items-center">
           <FaInstagram className="text-gray-600 text-2xl cursor-pointer hover:text-black" />
-          <FiX className="text-gray-600 text-2xl cursor-pointer hover:text-black" />
+          <FaWhatsapp className="text-gray-600 text-2xl cursor-pointer hover:text-black" />
+          <FaXTwitter className="text-gray-600 text-2xl cursor-pointer hover:text-black" />
         </div>
         <div className="hidden md:flex space-x-4 items-center">
           <button className="px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100">
@@ -35,7 +58,7 @@ const Navbar = () => {
         </div>
 
         <div className="md:hidden">
-          <button onClick={() => setOpen(open)}>
+          <button onClick={() => setOpen(!open)}>
             {open ? (
               <FiX className="text-3xl text-gray-700" />
             ) : (

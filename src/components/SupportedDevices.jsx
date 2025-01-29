@@ -2,7 +2,7 @@ import React from "react";
 
 const SupportedDevices = () => {
   return (
-    <section className="max-w-5xl ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8">
+    <section className="max-w-[1060px] ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8">
       <h2 className="text-3xl font-bold text-left text-blue-900 border-b border-blue-900 pb-2 mb-6">
         Supported Devices
       </h2>

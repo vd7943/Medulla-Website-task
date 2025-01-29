@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -8,6 +8,10 @@ import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
 
 function App() {
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
+
   return (
     <Router>
       <div className="flex flex-col min-h-screen relative">
