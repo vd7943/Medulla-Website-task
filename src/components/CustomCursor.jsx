@@ -23,7 +23,7 @@ const CustomCursor = () => {
   return (
     <>
       <div
-        className="fixed top-0 left-0 w-3 h-3 bg-black rounded-full pointer-events-none"
+        className="fixed top-0 left-0 z-100 w-3 h-3 bg-black rounded-full pointer-events-none"
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
         }}
@@ -31,7 +31,7 @@ const CustomCursor = () => {
 
       {isMoving && (
         <div
-          className="fixed top-0 left-0 w-3 h-3 bg-[#62c8df] rounded-full pointer-events-none transition-transform duration-70 ease-in-out"
+          className="fixed top-0 left-0 z-100 w-3 h-3 bg-[#62c8df] rounded-full pointer-events-none transition-transform duration-70 ease-in-out"
           style={{
             transform: `translate(${position.x - 10}px, ${position.y - 10}px)`,
           }}

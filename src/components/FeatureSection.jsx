@@ -3,9 +3,9 @@ import { FaHeart } from "react-icons/fa";
 
 const FeatureSection = () => {
   return (
-    <div className="max-w-5xl ml-auto mr-8 my-20 px-6 flex flex-col lg:flex-row items-center bg-white">
-      <div className="lg:w-1/2 space-y-6">
-        <FaHeart className="text-red-500 text-3xl" />
+    <div className="max-w-5xl mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-2xl">
+      <div className="lg:w-1/2 space-y-6 lg:mr-10 text-center lg:text-left">
+        <FaHeart className="text-red-500 text-3xl mx-auto lg:ml-2" />
         <h2 className="text-2xl md:text-3xl font-bold text-blue-900 leading-snug">
           Unlike traditional methods, <br />
           this app focuses on:
@@ -23,16 +23,16 @@ const FeatureSection = () => {
         </ul>
       </div>
 
-      <div className="lg:w-1/2 flex justify-center mt-10 lg:mt-0">
+      <div className="lg:w-1/2 flex flex-col sm:flex-row justify-center items-center gap-6 mt-10 lg:mt-0">
         <img
           src="feature-1.png"
           alt="App Preview 1"
-          className="w-72 md:w-96 lg:w-[400px] drop-shadow-lg"
+          className="w-full h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg"
         />
         <img
           src="feature-2.png"
           alt="App Preview 2"
-          className="w-72 md:w-96 lg:w-[400px] drop-shadow-lg"
+          className="w-full h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg"
         />
       </div>
     </div>

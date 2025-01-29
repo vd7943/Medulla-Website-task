@@ -2,6 +2,9 @@ import React from "react";
 import FeatureSection from "./FeatureSection";
 import SupportedDevices from "./SupportedDevices";
 import Faq from "./Faq";
+import Goal from "./Goal";
+import Why from "./Why";
+import JoinUs from "./JoinUs";
 
 const Home = () => {
   return (
@@ -41,6 +44,9 @@ const Home = () => {
         />
       </div>
       <FeatureSection />
+      <Goal />
+      <Why />
+      <JoinUs />
       <SupportedDevices />
       <Faq />
     </div>
