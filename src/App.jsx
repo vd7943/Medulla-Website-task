@@ -5,11 +5,13 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen relative">
+        <CustomCursor />
         <Navbar />
         <main className="flex-grow">
           <Routes>

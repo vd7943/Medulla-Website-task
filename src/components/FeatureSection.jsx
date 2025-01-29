@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 
 const FeatureSection = () => {
   return (
-    <div className="max-w-4xl mx-auto my-20 px-6 flex flex-col lg:flex-row items-center bg-white">
+    <div className="max-w-5xl ml-auto mr-10 my-20 px-6 flex flex-col lg:flex-row items-center bg-white">
       <div className="lg:w-1/2 space-y-6">
         <FaHeart className="text-red-500 text-3xl" />
         <h2 className="text-2xl md:text-3xl font-bold text-blue-900 leading-snug">

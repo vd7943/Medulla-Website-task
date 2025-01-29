@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-blue-100 to-white p-6 shadow-md">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center ps-6">
         <Link to="/" className="flex items-center">
           <img src="logo.svg" alt="Medulla Flashcards Logo" className="h-12" />
         </Link>
