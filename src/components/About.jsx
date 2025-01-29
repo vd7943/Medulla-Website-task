@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white text-center">
+      <div className="min-h-screen pt-32 bg-gradient-to-b from-blue-100 to-white text-center">
         <section className="max-w-4xl mx-auto p-6 bg-white shadow-lg border border-gray-200">
           <h2 className="text-3xl font-extrabold text-center text-blue-900 border-b-2 border-blue-900 pb-2 mb-6">
             About Us
