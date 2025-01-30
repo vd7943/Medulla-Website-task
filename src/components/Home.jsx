@@ -5,6 +5,15 @@ import Faq from "./Faq";
 import Goal from "./Goal";
 import Why from "./Why";
 import JoinUs from "./JoinUs";
+import { motion } from "framer-motion";
+
+const images = [
+  "home-1.png",
+  "home-2.png",
+  "home-3.png",
+  "home-4.png",
+  "home-5.png",
+];
 
 const Home = () => {
   return (
@@ -15,34 +24,23 @@ const Home = () => {
           Designed by Gen Z Doctors, for Gen Z Doctors
         </h1>
       </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-6 mt-10">
-        <img
-          src="home-1.png"
-          alt="App Screenshot 1"
-          className="w-full rounded-lg shadow-lg"
-        />
-        <img
-          src="home-2.png"
-          alt="App Screenshot 2"
-          className="w-full rounded-lg shadow-lg"
-        />
-        <img
-          src="home-3.png"
-          alt="App Screenshot 3"
-          className="w-full rounded-lg shadow-lg"
-        />
-        <img
-          src="home-4.png"
-          alt="App Screenshot 4"
-          className="w-full rounded-lg shadow-lg"
-        />
-        <img
-          src="home-5.png"
-          alt="App Screenshot 5"
-          className="w-full rounded-lg shadow-lg"
-        />
+      <div className="overflow-hidden mt-10 py-4">
+        <motion.div
+          className="flex space-x-4"
+          animate={{ x: [0, -500] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        >
+          {images.concat(images).map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`App Screenshot ${index + 1}`}
+              className="w-64 h-auto rounded-lg shadow-lg"
+            />
+          ))}
+        </motion.div>
       </div>
+
       <FeatureSection />
       <Goal />
       <Why />
