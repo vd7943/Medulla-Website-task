@@ -9,7 +9,7 @@ import CustomCursor from "./components/CustomCursor";
 
 function App() {
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
+    document.documentElement.style.scrollBehavior = "auto";
   }, []);
 
   const location = useLocation();
