@@ -16,9 +16,27 @@ const Faq = () => {
               Maecenas tempus, tellus eget.
             </p>
           </AccordionItem>
-          <AccordionItem title="When will I receive my order?" />
-          <AccordionItem title="Can I skip a delivery?" />
-          <AccordionItem title="Can I add Extras to my delivery?" />
+          <AccordionItem title="When will I receive my order?">
+            <p className="text-left">
+              Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+              Maecenas tempus, tellus eget.
+            </p>
+          </AccordionItem>
+          <AccordionItem title="Can I skip a delivery?">
+            <p className="text-left">
+              Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+              Maecenas tempus, tellus eget.
+            </p>
+          </AccordionItem>
+          <AccordionItem title="Can I add Extras to my delivery?">
+            <p className="text-left">
+              Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+              Maecenas tempus, tellus eget.
+            </p>
+          </AccordionItem>
         </div>
       </section>
     </>

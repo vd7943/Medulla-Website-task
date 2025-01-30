@@ -26,16 +26,31 @@ const Home = () => {
       </div>
       <div className="overflow-hidden mt-10 py-4">
         <motion.div
-          className="flex space-x-4"
-          animate={{ x: [0, -500] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          className="flex space-x-4 pb-6"
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
         >
-          {images.concat(images).map((src, index) => (
+          {[...images, ...images].map((src, index) => (
             <img
               key={index}
               src={src}
               alt={`App Screenshot ${index + 1}`}
-              className="w-64 h-auto rounded-lg shadow-lg"
+              className="w-fit h-auto"
+            />
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="flex space-x-4"
+          animate={{ x: ["-100%", "0%"] }}
+          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        >
+          {[...images, ...images].map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`App Screenshot ${index + 1}`}
+              className="w-fit h-auto"
             />
           ))}
         </motion.div>
