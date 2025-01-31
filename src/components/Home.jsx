@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import FeatureSection from "./FeatureSection";
 import SupportedDevices from "./SupportedDevices";
 import Faq from "./Faq";
@@ -20,18 +20,23 @@ const images = [
 ];
 
 const Home = () => {
+  const containerRef = useRef(null);
+  const imagesRef = useRef(null);
+
   useLayoutEffect(() => {
     const elements = gsap.utils.toArray(".fade-in");
 
-    elements.forEach((element) => {
+    elements.forEach((element, index) => {
       gsap.fromTo(
         element,
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 50, scale: 0.95 },
         {
           opacity: 1,
           y: 0,
+          scale: 1,
           duration: 1.2,
           ease: "power2.out",
+          delay: index * 0.2,
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
@@ -41,19 +46,37 @@ const Home = () => {
       );
     });
 
+    gsap.to(imagesRef.current, {
+      yPercent: -10,
+      ease: "none",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
     ScrollTrigger.refresh();
   }, []);
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white text-center">
+    <div
+      ref={containerRef}
+      className="min-h-screen bg-gradient-to-b from-blue-100 to-white text-center"
+    >
       <div className="pt-34 px-6 fade-in">
-        <h1 className="text-2xl md:text-4xl font-bold text-blue-900 leading-snug">
+        <motion.h1
+          className="text-2xl md:text-4xl font-bold text-blue-900 leading-snug"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           Medulla Flashcards for NEET-PG, INI-CET, FMGE <br />
           Designed by Gen Z Doctors, for Gen Z Doctors
-        </h1>
+        </motion.h1>
       </div>
 
-      <div className="overflow-hidden mt-10 py-4 fade-in">
+      <div className="overflow-hidden mt-10 py-4 fade-in" ref={imagesRef}>
         <motion.div
           className="flex space-x-4 pb-6"
           animate={{ x: ["0%", "-100%"] }}
@@ -68,7 +91,8 @@ const Home = () => {
             />
           ))}
         </motion.div>
-
+      </div>
+      <div className="overflow-hidden mt-10 py-4 fade-in" ref={imagesRef}>
         <motion.div
           className="flex space-x-4"
           animate={{ x: ["-100%", "0%"] }}

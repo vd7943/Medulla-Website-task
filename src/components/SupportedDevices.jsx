@@ -1,36 +1,59 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-const floatingAnimation = {
-  initial: { y: 0 },
-  animate: {
-    y: [-10, 0, -10],
-    transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-  },
+const staggerList = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.8 },
+  }),
 };
 
 const SupportedDevices = () => {
+  const sectionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.to(".device-image", {
+      yPercent: -5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    ScrollTrigger.refresh();
+  }, []);
+
   return (
     <motion.section
+      ref={sectionRef}
       initial="hidden"
       animate="visible"
       variants={fadeIn}
-      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8"
+      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 fade-in"
     >
       <motion.h2
-        className="text-2xl md:text-3xl font-bold text-blue-900 border-b border-blue-900 pb-2 mb-6 lg:text-left"
+        className="text-2xl md:text-3xl font-bold text-blue-900 border-b border-blue-900 pb-2 mb-6 lg:text-left fade-in"
         variants={fadeIn}
       >
         Supported Devices
       </motion.h2>
 
       <motion.p
-        className="text-gray-700 text-base md:text-lg mb-6"
+        className="text-gray-700 text-base md:text-lg mb-6 fade-in"
         variants={fadeIn}
       >
         As students, we understand the importance of accessibility across
@@ -42,33 +65,40 @@ const SupportedDevices = () => {
           className="list-disc list-inside text-gray-700 text-base md:text-lg space-y-2 xl:text-left"
           initial="hidden"
           animate="visible"
-          variants={fadeIn}
         >
-          <motion.li variants={fadeIn}>Android phones</motion.li>
-          <motion.li variants={fadeIn}>Android Tablets</motion.li>
-          <motion.li variants={fadeIn}>iPhones</motion.li>
-          <motion.li variants={fadeIn}>iPads</motion.li>
-          <motion.li variants={fadeIn}>Landscape Mode in Tablets</motion.li>
+          {[
+            "Android phones",
+            "Android Tablets",
+            "iPhones",
+            "iPads",
+            "Landscape Mode in Tablets",
+          ].map((device, index) => (
+            <motion.li key={device} variants={staggerList} custom={index}>
+              {device}
+            </motion.li>
+          ))}
         </motion.ul>
 
         <div className="flex flex-wrap justify-center gap-4">
           <motion.img
             src="device-1.png"
             alt="Supported Devices"
-            className="w-40 md:w-56 lg:w-[360px] lg:h-[320px] drop-shadow-lg"
-            variants={floatingAnimation}
-            initial="initial"
-            animate="animate"
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+            className="device-image w-40 md:w-56 lg:w-[360px] lg:h-[320px] drop-shadow-lg fade-in"
+            whileHover={{
+              scale: 1.05,
+              rotateZ: 3,
+              transition: { duration: 0.3 },
+            }}
           />
           <motion.img
             src="device-2.png"
             alt="Supported Devices"
-            className="w-40 md:w-56 lg:w-[250px] lg:h-[460px] drop-shadow-lg"
-            variants={floatingAnimation}
-            initial="initial"
-            animate="animate"
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+            className="device-image w-40 md:w-56 lg:w-[250px] lg:h-[460px] drop-shadow-lg fade-in"
+            whileHover={{
+              scale: 1.05,
+              rotateZ: -3,
+              transition: { duration: 0.3 },
+            }}
           />
         </div>
       </div>
