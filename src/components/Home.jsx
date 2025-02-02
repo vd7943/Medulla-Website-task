@@ -66,10 +66,10 @@ const Home = () => {
     >
       <div className="pt-34 px-6 fade-in">
         <motion.h1
-          className="text-2xl md:text-4xl font-bold text-blue-900 leading-snug"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          className="text-2xl md:text-4xl font-bold text-blue-900 leading-snug fade-in"
+          initial={{ opacity: 0, y: 70 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           Medulla Flashcards for NEET-PG, INI-CET, FMGE <br />
           Designed by Gen Z Doctors, for Gen Z Doctors

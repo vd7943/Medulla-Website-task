@@ -21,7 +21,7 @@ const Why = () => {
           scale: 1,
           duration: 0.8,
           ease: "power2.out",
-          delay: index * 0.2,
+          delay: index * 0.1,
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
@@ -48,7 +48,7 @@ const Why = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row items-center gap-10 fade-in"
+      className="max-w-[1060px] lg:h-[600px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row items-center gap-10 fade-in"
     >
       <div className="lg:w-1/2 space-y-6 p-6 text-center lg:text-left">
         <motion.h2
@@ -105,7 +105,7 @@ const Why = () => {
         <motion.img
           src="why-1.png"
           alt="Medulla Flashcards App"
-          className="why-image w-40 md:w-64 lg:w-[320px] lg:h-[500px] drop-shadow-lg fade-in"
+          className="why-image w-40 md:w-64 lg:w-[300px] lg:h-[600px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-20, 0, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

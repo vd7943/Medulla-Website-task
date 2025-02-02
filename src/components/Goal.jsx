@@ -48,10 +48,10 @@ const Goal = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="max-w-[1060px] mx-auto lg:mx-0 lg:mr-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row gap-10 lg:gap-20 items-center fade-in"
+      className="max-w-[1060px] lg:h-[420px] mx-auto lg:mx-0 lg:mr-auto py-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row gap-10 lg:gap-20 items-center fade-in"
     >
       <motion.div
-        className="w-full lg:w-1/3 flex justify-center lg:justify-start mt-10 lg:mt-0 fade-in"
+        className="w-full lg:w-1/3 flex justify-center lg:justify-end mt-10 lg:mt-0 fade-in"
         initial={{ rotateX: -5, rotateY: 15 }}
         whileHover={{ rotateX: 0, rotateY: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -59,7 +59,7 @@ const Goal = () => {
         <motion.img
           src="goal-1.png"
           alt="Device"
-          className="goal-image w-56 h-[400px] md:w-64 md:h-[450px] lg:w-[320px] lg:h-[520px] drop-shadow-lg fade-in"
+          className="goal-image w-56 h-[400px] md:w-64 md:h-[450px] lg:w-[280px] lg:h-[520px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-20, 0, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

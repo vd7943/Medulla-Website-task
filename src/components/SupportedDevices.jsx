@@ -15,7 +15,7 @@ const staggerList = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.8 },
+    transition: { delay: i * 0.1, duration: 0.8 },
   }),
 };
 
@@ -43,7 +43,7 @@ const SupportedDevices = () => {
       initial="hidden"
       animate="visible"
       variants={fadeIn}
-      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 fade-in"
+      className="max-w-[1060px] lg:h-[550px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 fade-in"
     >
       <motion.h2
         className="text-2xl md:text-3xl font-bold text-blue-900 border-b border-blue-900 pb-2 mb-6 lg:text-left fade-in"
@@ -83,7 +83,7 @@ const SupportedDevices = () => {
           <motion.img
             src="device-1.png"
             alt="Supported Devices"
-            className="device-image w-40 md:w-56 lg:w-[360px] lg:h-[320px] drop-shadow-lg fade-in"
+            className="device-image w-40 md:w-56 lg:w-[370px] lg:h-[320px] drop-shadow-lg fade-in"
             whileHover={{
               scale: 1.05,
               rotateZ: 3,
@@ -93,7 +93,7 @@ const SupportedDevices = () => {
           <motion.img
             src="device-2.png"
             alt="Supported Devices"
-            className="device-image w-40 md:w-56 lg:w-[250px] lg:h-[460px] drop-shadow-lg fade-in"
+            className="device-image w-40 md:w-56 lg:w-[200px] lg:h-[380px] drop-shadow-lg fade-in"
             whileHover={{
               scale: 1.05,
               rotateZ: -3,

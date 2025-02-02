@@ -26,7 +26,7 @@ const JoinUs = () => {
           scale: 1,
           duration: 0.8,
           ease: "power2.out",
-          delay: index * 0.2,
+          delay: index * 0.1,
           scrollTrigger: {
             trigger: element,
             start: "top 85%",
@@ -53,13 +53,13 @@ const JoinUs = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="max-w-[1120px] mx-auto lg:mx-0 lg:mr-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row items-center gap-10 fade-in"
+      className="max-w-[1160px] lg:h-[500px] mx-auto lg:mx-0 lg:mr-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row items-center fade-in"
     >
       <div className="lg:w-1/2 flex justify-center gap-4">
         <motion.img
           src="join-1.png"
           alt="Medulla Plus Subscription"
-          className="join-image w-40 md:w-56 lg:w-[400px] lg:h-[480px] drop-shadow-lg fade-in"
+          className="join-image w-40 md:w-56 lg:w-[420px] lg:h-[520px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-15, 0, -15] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -72,7 +72,7 @@ const JoinUs = () => {
         <motion.img
           src="join-1.png"
           alt="Medulla Core Subscription"
-          className="join-image w-40 md:w-56 lg:w-[400px] lg:h-[480px] drop-shadow-lg fade-in"
+          className="join-image w-40 md:w-56 lg:w-[420px] lg:h-[520px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-15, 0, -15] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

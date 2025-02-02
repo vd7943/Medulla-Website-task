@@ -49,7 +49,7 @@ const FeatureSection = () => {
   return (
     <motion.div
       ref={sectionRef}
-      className="max-w-5xl mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-2xl fade-in"
+      className="max-w-5xl lg:h-[500px] mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-2xl fade-in"
     >
       <div className="lg:w-1/2 space-y-6 lg:mr-10 text-center lg:text-left fade-in">
         <FaHeart className="text-red-500 text-3xl mx-auto lg:ml-2" />
@@ -77,17 +77,17 @@ const FeatureSection = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <motion.img
-          src="feature-1.webp"
+          src="feature-1.png"
           alt="Mockup 1"
-          className="mockup-image w-full h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
+          className="mockup-image xl:mt-16 w-full h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-20, 0, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.img
-          src="feature-2.webp"
+          src="feature-2.png"
           alt="Mockup 2"
-          className="mockup-image w-full h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
+          className="mockup-image xl:mb-20 w-full h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
           initial={{ y: -20 }}
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
