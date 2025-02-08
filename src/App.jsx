@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "./components/Navbar";
@@ -13,9 +12,20 @@ import CustomCursor from "./components/CustomCursor";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen relative w-full overflow-x-hidden">
-      <CustomCursor />
+      {!isMobile && <CustomCursor />}
       <Navbar />
       <main className="flex-grow">
         <Routes>

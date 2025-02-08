@@ -98,8 +98,8 @@ const Why = () => {
 
       <motion.div
         className="lg:w-1/2 flex justify-center fade-in"
-        initial={{ rotateX: -5, rotateY: 15 }}
-        whileHover={{ rotateX: 0, rotateY: 0 }}
+        initial={{ rotateX: 0, rotateY: 0 }}
+        whileHover={{ rotateX: -5, rotateY: 15 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <motion.img

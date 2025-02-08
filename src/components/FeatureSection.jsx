@@ -71,7 +71,7 @@ const FeatureSection = () => {
       </div>
 
       <motion.div
-        className="lg:w-1/2 flex flex-col sm:flex-row justify-center items-center mt-10 lg:mt-0 relative lg:pr-20"
+        className="lg:w-1/2 flex flex-col gap-2 sm:flex-row justify-center items-center mt-10 lg:mt-0 relative lg:pr-20"
         initial={{ rotateX: -5, rotateY: 15 }}
         whileHover={{ rotateX: 0, rotateY: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}

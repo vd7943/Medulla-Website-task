@@ -62,7 +62,7 @@ const Home = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-gradient-to-b from-blue-100 to-white text-center"
+      className="min-h-screen custom-gradient bg-gradient-to-r from-blue-200 via-white to-blue-200 text-center"
     >
       <div className="pt-34 px-6 fade-in">
         <motion.h1
@@ -80,22 +80,6 @@ const Home = () => {
         <motion.div
           className="flex space-x-4 pb-6"
           animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-        >
-          {[...images, ...images].map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`App Screenshot ${index + 1}`}
-              className="w-fit h-auto"
-            />
-          ))}
-        </motion.div>
-      </div>
-      <div className="overflow-hidden mt-10 py-4 fade-in" ref={imagesRef}>
-        <motion.div
-          className="flex space-x-4"
-          animate={{ x: ["-100%", "0%"] }}
           transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
         >
           {[...images, ...images].map((src, index) => (

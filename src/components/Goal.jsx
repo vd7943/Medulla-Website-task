@@ -52,14 +52,14 @@ const Goal = () => {
     >
       <motion.div
         className="w-full lg:w-1/3 flex justify-center lg:justify-end mt-10 lg:mt-0 fade-in"
-        initial={{ rotateX: -5, rotateY: 15 }}
-        whileHover={{ rotateX: 0, rotateY: 0 }}
+        initial={{ rotateX: 0, rotateY: 0 }}
+        whileHover={{ rotateX: -5, rotateY: 15 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <motion.img
           src="goal-1.png"
           alt="Device"
-          className="goal-image w-56 h-[400px] md:w-64 md:h-[450px] lg:w-[280px] lg:h-[520px] drop-shadow-lg fade-in"
+          className="goal-image w-48 h-[400px] md:w-64 md:h-[450px] lg:w-[280px] lg:h-[520px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-20, 0, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

@@ -28,7 +28,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full p-6 transition-all duration-300 z-50 ${
         scrolling
           ? "backdrop-blur-md bg-white/50 shadow-md"
-          : "bg-gradient-to-r from-blue-100 to-white-blue"
+          : "bg-gradient-to-r from-blue-200 via-white to-blue-200"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
@@ -73,15 +73,15 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="absolute inset-0 bg-gradient-to-t from-gray-500 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
+            <span className="absolute inset-0 bg-gradient-to-t from-gray-500 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-50" />
             <FaApple className="mr-2" /> iOS
           </motion.button>
           <motion.button
-            className="relative flex items-center px-4 py-2 bg-blue-700 text-white rounded-lg overflow-hidden hover:bg-blue-900"
+            className="relative flex items-center px-4 py-2 bg-green-700 text-white rounded-lg overflow-hidden hover:bg-green-900"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
+            <span className="absolute inset-0 bg-gradient-to-t from-green-500 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-50" />
             <FaAndroid className="mr-2" /> Android
           </motion.button>
         </div>
@@ -146,11 +146,11 @@ const Navbar = () => {
             <FaApple className="mr-2" /> iOS
           </motion.button>
           <motion.button
-            className="relative flex items-center px-4 py-2 bg-blue-700 text-white rounded-lg overflow-hidden hover:bg-blue-900"
+            className="relative flex items-center px-4 py-2 bg-green-700 text-white rounded-lg overflow-hidden hover:bg-green-900"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="absolute inset-0 bg-gradient-to-t from-blue-500 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
+            <span className="absolute inset-0 bg-gradient-to-t from-green-500 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
             <FaAndroid className="mr-2" /> Android
           </motion.button>
         </motion.div>
