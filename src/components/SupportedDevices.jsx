@@ -83,7 +83,7 @@ const SupportedDevices = () => {
           <motion.img
             src="device-1.png"
             alt="Supported Devices"
-            className="device-image w-42 sm:w-40 md:w-48 lg:w-76 drop-shadow-lg fade-in"
+            className="device-image w-72 sm:w-40 md:w-48 lg:w-76 drop-shadow-lg fade-in"
             whileHover={{
               scale: 1.05,
               rotateZ: 3,

@@ -31,7 +31,7 @@ const Navbar = () => {
           : "bg-gradient-to-r from-blue-200 via-white to-blue-200"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center md:px-6">
         <Link to="/" className="flex items-center">
           <img src="logo.svg" alt="Medulla Flashcards Logo" className="h-12" />
         </Link>
