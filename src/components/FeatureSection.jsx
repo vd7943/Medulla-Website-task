@@ -79,7 +79,7 @@ const FeatureSection = () => {
         <motion.img
           src="feature-1.png"
           alt="Mockup 1"
-          className="mockup-image xl:mt-16 w-42 h-[500px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
+          className="mockup-image xl:mt-16 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-20, 0, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -87,7 +87,7 @@ const FeatureSection = () => {
         <motion.img
           src="feature-2.png"
           alt="Mockup 2"
-          className="mockup-image xl:mb-20 w-42 h-[500px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
+          className="mockup-image xl:mb-20 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
           initial={{ y: -20 }}
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
