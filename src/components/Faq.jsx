@@ -15,10 +15,10 @@ const Faq = () => {
       animate="visible"
       className="max-w-6xl mx-auto p-6 mt-8"
     >
-      <motion.h2 className="text-4xl font-bold text-left text-blue-900 pb-2 mb-6">
+      <motion.h2 className="text-4xl lg:text-5xl font-bold text-left text-blue-950 mb-6">
         FAQs
       </motion.h2>
-      <div className="bg-white shadow-lg rounded-2xl border border-gray-200">
+      <div className="bg-white shadow-lg rounded-2xl border border-gray-200 mb-1">
         <AccordionItem
           title="Can I choose my meals?"
           onToggle={() => toggleAccordion(0)}
@@ -29,6 +29,8 @@ const Faq = () => {
             Maecenas tempus, tellus eget.
           </p>
         </AccordionItem>
+      </div>
+      <div className="bg-white shadow-lg rounded-2xl border border-gray-200 mb-1">
         <AccordionItem
           title="When will I receive my order?"
           expanded={expanded === 1}
@@ -40,6 +42,8 @@ const Faq = () => {
             Maecenas tempus, tellus eget.
           </p>
         </AccordionItem>
+      </div>
+      <div className="bg-white shadow-lg rounded-2xl border border-gray-200 mb-1">
         <AccordionItem
           title="Can I skip a delivery?"
           expanded={expanded === 2}
@@ -51,6 +55,8 @@ const Faq = () => {
             Maecenas tempus, tellus eget.
           </p>
         </AccordionItem>
+      </div>
+      <div className="bg-white shadow-lg rounded-2xl border border-gray-200 mb-1">
         <AccordionItem
           title="Can I add Extras to my delivery?"
           expanded={expanded === 3}

@@ -66,7 +66,7 @@ const Home = () => {
     >
       <div className="pt-34 px-6 fade-in">
         <motion.h1
-          className="text-2xl md:text-4xl font-bold text-blue-900 leading-snug fade-in"
+          className="text-2xl md:text-4xl font-bold text-blue-950 leading-snug fade-in"
           initial={{ opacity: 0, y: 70 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}

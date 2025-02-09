@@ -48,50 +48,46 @@ const Why = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="max-w-[1060px] lg:h-[600px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row items-center gap-10 fade-in"
+      className="max-w-[1020px] lg:h-[600px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-lg border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row items-center fade-in"
     >
-      <div className="lg:w-1/2 space-y-6 p-6 text-center lg:text-left">
-        <motion.h2
-          className="text-2xl md:text-3xl font-bold text-blue-900 border-b border-blue-900 pb-2 fade-in"
-          whileHover={{
-            borderBottomColor: "#ff5733",
-            transition: { duration: 0.3 },
-          }}
-        >
+      <div className="lg:w-1/2 space-y-6 p-6 text-center lg:text-left fade-in">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 flex items-center justify-center gap-2">
+          <span className="w-12 h-[2px] bg-blue-900"></span>
           Why Us
-        </motion.h2>
+          <span className="w-12 h-[2px] bg-blue-900"></span>
+        </h2>
 
-        <motion.p className="text-gray-700 text-base md:text-lg font-semibold fade-in">
+        <p className="text-gray-700 text-base md:text-lg font-semibold">
           A Safe Space for Medical Students – A Perfect Revision Companion!
           <br />
           Our app is designed as a standalone revision tool catering to 1st-year
           to 4th-year MBBS students, interns, and post-interns.
-        </motion.p>
+        </p>
 
-        <motion.p className="text-gray-700 text-base md:text-lg font-semibold fade-in">
+        <p className="text-gray-700 text-base md:text-lg font-semibold">
           We're not here to compete; we’re here to complement.
-        </motion.p>
+        </p>
 
-        <motion.p className="text-gray-700 text-base md:text-lg font-semibold fade-in">
+        <p className="text-gray-700 text-base md:text-lg font-semibold">
           Think of it as a stress-free, no-pressure space with a simple,
           beautiful UI tailored for the next generation of doctors.
-        </motion.p>
+        </p>
 
-        <div className="mt-6 fade-in">
-          <motion.div className="flex justify-between text-gray-700 text-base md:text-lg font-semibold fade-in">
+        <div className="mt-6 mb-8">
+          <div className="flex justify-between text-gray-700 text-base md:text-lg font-semibold">
             <span>Flashcards</span>
             <span>2000+</span>
-          </motion.div>
-          <div className="h-1 w-full bg-gray-300 mt-1 fade-in">
-            <motion.div className="h-full w-[60%] bg-blue-900" />
+          </div>
+          <div className="h-1 w-full bg-gray-300 mt-1">
+            <div className="h-full w-[60%] bg-blue-900" />
           </div>
 
-          <motion.div className="flex justify-between text-gray-700 text-base md:text-lg font-semibold mt-4 fade-in">
+          <div className="flex justify-between text-gray-700 text-base md:text-lg font-semibold mt-4">
             <span>Question & Answer</span>
             <span>20,000+</span>
-          </motion.div>
-          <div className="h-1 w-full bg-gray-300 mt-1 fade-in">
-            <motion.div className="h-full w-[80%] bg-blue-900" />
+          </div>
+          <div className="h-1 w-full bg-gray-300 mt-1">
+            <div className="h-full w-[80%] bg-blue-900" />
           </div>
         </div>
       </div>
@@ -105,7 +101,7 @@ const Why = () => {
         <motion.img
           src="why-1.png"
           alt="Medulla Flashcards App"
-          className="why-image w-40 md:w-64 lg:w-[300px] lg:h-[600px] drop-shadow-lg fade-in"
+          className="why-image w-40 md:w-64 lg:w-[280px] lg:h-[600px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-20, 0, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

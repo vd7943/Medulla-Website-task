@@ -43,26 +43,23 @@ const SupportedDevices = () => {
       initial="hidden"
       animate="visible"
       variants={fadeIn}
-      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-2xl border border-gray-200 mt-8 fade-in"
+      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 lg:ps-12 bg-white shadow-lg rounded-lg border border-gray-200 mt-8 fade-in"
     >
-      <motion.h2
-        className="text-2xl md:text-3xl font-bold text-blue-900 border-b border-blue-900 pb-2 mb-6 text-center lg:text-left fade-in"
-        variants={fadeIn}
-      >
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 flex items-center justify-center lg:justify-start gap-2 pb-4">
+        <span className="w-12 h-[2px] bg-blue-900"></span>
         Supported Devices
-      </motion.h2>
+        <span className="w-12 h-[2px] bg-blue-900"></span>
+      </h2>
+      <div>
+        <p className="text-gray-700 text-base md:text-lg mb-6 text-left font-semibold">
+          As students, we understand the importance of accessibility across
+          devices. That's why our app is designed to work seamlessly on:
+        </p>
+      </div>
 
-      <motion.p
-        className="text-gray-700 text-base md:text-lg mb-6 text-center lg:text-left fade-in"
-        variants={fadeIn}
-      >
-        As students, we understand the importance of accessibility across
-        devices. That's why our app is designed to work seamlessly on:
-      </motion.p>
-
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
-        <motion.ul
-          className="list-disc list-inside text-gray-700 text-base md:text-lg space-y-2 text-center lg:text-left"
+      <div className="flex flex-col lg:flex-row items-center lg:items-start font-semibold">
+        <ul
+          className="list-disc list-inside text-gray-700 text-base md:text-lg space-y-2 text-left"
           initial="hidden"
           animate="visible"
         >
@@ -73,11 +70,16 @@ const SupportedDevices = () => {
             "iPads",
             "Landscape Mode in Tablets",
           ].map((device, index) => (
-            <motion.li key={device} variants={staggerList} custom={index}>
+            <li
+              key={device}
+              variants={staggerList}
+              custom={index}
+              className="lg:ps-4"
+            >
               {device}
-            </motion.li>
+            </li>
           ))}
-        </motion.ul>
+        </ul>
 
         <div className="flex flex-col gap-0 items-center md:flex-row">
           <motion.img
@@ -90,11 +92,11 @@ const SupportedDevices = () => {
               transition: { duration: 0.3 },
             }}
           />
-          <div className="flex flex-row gap-x-0">
+          <div className="flex flex-row gap-x-0 fade-in">
             <motion.img
               src="device-2.png"
               alt="Supported Devices"
-              className="device-image w-40 sm:w-40 md:w-48 lg:w-[210px] lg:h-[420px] drop-shadow-lg fade-in"
+              className="device-image w-40 sm:w-40 md:w-48 lg:w-[210px] lg:h-[420px] drop-shadow-lg"
               whileHover={{
                 scale: 1.05,
                 rotateZ: -3,
@@ -104,7 +106,7 @@ const SupportedDevices = () => {
             <motion.img
               src="device-3.png"
               alt="Supported Devices"
-              className="device-image w-32 sm:w-40 md:w-48 lg:w-[210px] lg:h-[430px] drop-shadow-lg fade-in"
+              className="device-image w-32 sm:w-40 md:w-48 lg:w-[210px] lg:h-[430px] drop-shadow-lg"
               whileHover={{
                 scale: 1.05,
                 rotateZ: -3,

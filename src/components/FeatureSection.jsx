@@ -49,29 +49,29 @@ const FeatureSection = () => {
   return (
     <motion.div
       ref={sectionRef}
-      className="max-w-5xl lg:h-[500px] mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-2xl fade-in"
+      className="max-w-5xl lg:h-[460px] mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 lg:mb-10 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-lg fade-in"
     >
       <div className="lg:w-1/2 space-y-6 lg:mr-10 text-center lg:text-left fade-in">
-        <FaHeart className="text-red-500 text-3xl mx-auto lg:ml-2" />
-        <motion.h2 className="text-2xl md:text-3xl font-bold text-blue-900 leading-snug fade-in">
+        <FaHeart className="text-[#FF5033] text-3xl mx-auto lg:ml-4" />
+        <h2 className="text-2xl md:text-3xl font-bold lg:ps-4 text-blue-950 leading-snug">
           Unlike traditional methods, <br />
           this app focuses on:
-        </motion.h2>
-        <motion.ul className="text-gray-700 text-lg space-y-4 fade-in">
+        </h2>
+        <ul className="text-gray-700 text-lg space-y-4 lg:ps-8 list-disc list-inside font-semibold">
           <li>
-            ✅ Active recall techniques with 2000-3000 high-yield flashcards
-            based on Previous Year Topics and 20,000+ Question and Answers based
-            on Revision Notes.
+            Active recall techniques with 2000-3000 high-yield flashcards based
+            on Previous Year Topics and 20,000+ Question and Answers based on
+            Revision Notes.
           </li>
           <li>
-            ✅ A beautifully simple, user-friendly interface that eliminates
-            MCQs, keeping learning direct and stress-free.
+            A beautifully simple, user-friendly interface that eliminates MCQs,
+            keeping learning direct and stress-free.
           </li>
-        </motion.ul>
+        </ul>
       </div>
 
       <motion.div
-        className="lg:w-1/2 flex flex-col gap-2 sm:flex-row justify-center items-center mt-10 lg:mt-0 relative lg:pr-20"
+        className="lg:w-1/2 flex flex-col gap-2 sm:flex-row justify-center items-center mt-10 lg:mt-0 relative"
         initial={{ rotateX: -5, rotateY: 15 }}
         whileHover={{ rotateX: 0, rotateY: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -79,7 +79,7 @@ const FeatureSection = () => {
         <motion.img
           src="feature-1.png"
           alt="Mockup 1"
-          className="mockup-image xl:mt-16 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
+          className="mockup-image xl:mt-16 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-xl drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-20, 0, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -87,7 +87,7 @@ const FeatureSection = () => {
         <motion.img
           src="feature-2.png"
           alt="Mockup 2"
-          className="mockup-image xl:mb-20 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-md drop-shadow-lg fade-in"
+          className="mockup-image xl:mb-20 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-xl drop-shadow-lg fade-in"
           initial={{ y: -20 }}
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
