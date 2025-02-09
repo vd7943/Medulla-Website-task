@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
-
-gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);

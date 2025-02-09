@@ -50,7 +50,7 @@ const Goal = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="max-w-[1060px] lg:h-[420px] mx-auto lg:mx-0 lg:mr-auto py-6 bg-white shadow-lg rounded-lg border border-gray-200 mt-6 lg:mt-30 mb-10 lg:mb-36 flex flex-col lg:flex-row gap-10 lg:gap-20 items-center fade-in"
+      className="max-w-[1060px] lg:h-[420px] mx-auto lg:mx-0 lg:mr-auto py-6 bg-white shadow-lg rounded-lg border border-gray-200 mt-6 lg:mt-30 mb-10 lg:mb-36 flex flex-col lg:flex-row gap-10 lg:gap-20 items-center"
     >
       <div
         className="w-full lg:w-1/3 flex justify-center lg:justify-end mt-10 lg:mt-0 fade-in"

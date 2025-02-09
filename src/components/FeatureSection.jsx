@@ -49,7 +49,7 @@ const FeatureSection = () => {
   return (
     <motion.div
       ref={sectionRef}
-      className="max-w-5xl lg:h-[460px] mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 lg:mb-10 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-lg fade-in"
+      className="max-w-5xl lg:h-[460px] mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 lg:mb-10 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-lg"
     >
       <div className="lg:w-1/2 space-y-6 lg:mr-10 text-center lg:text-left fade-in">
         <FaHeart className="text-[#FF5033] text-3xl mx-auto lg:ml-4" />

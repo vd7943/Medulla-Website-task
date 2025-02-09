@@ -43,7 +43,7 @@ const SupportedDevices = () => {
       initial="hidden"
       animate="visible"
       variants={fadeIn}
-      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 lg:ps-12 bg-white shadow-lg rounded-lg border border-gray-200 mt-8 fade-in"
+      className="max-w-[1060px] mx-auto lg:mx-0 lg:ml-auto p-6 lg:ps-12 bg-white shadow-lg rounded-lg border border-gray-200 mt-8"
     >
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 flex items-center justify-center lg:justify-start gap-2 pb-4">
         <span className="w-12 h-[2px] bg-blue-900"></span>

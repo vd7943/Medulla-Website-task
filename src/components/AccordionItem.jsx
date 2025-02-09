@@ -7,7 +7,7 @@ const AccordionItem = ({ title, children }) => {
     <div className="border-b border-gray-300">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left py-4 px-6 font-semibold text-lg flex justify-between items-center"
+        className="w-full text-left py-4 px-6 font-semibold text-lg lg:font-bold lg:text-xl flex justify-between items-center"
       >
         {title}
         <span>{isOpen ? "-" : "+"}</span>

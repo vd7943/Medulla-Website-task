@@ -2,6 +2,7 @@ import React from "react";
 import { FaInstagram, FaXTwitter, FaGlobe } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { hr } from "framer-motion/client";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -14,18 +15,18 @@ const Footer = () => {
       initial="hidden"
       animate="visible"
       variants={fadeIn}
-      className="bg-gradient-to-r from-blue-100 to-white p-6 text-gray-800"
+      className="bg-gradient-to-r from-blue-200 via-white to-blue-200 p-6 lg:ps-18 text-gray-800"
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0 md:space-x-12 text-center md:text-left">
+      <div className="pt-6 max-w-7xl mx-auto flex flex-col md:flex-row lg:gap-62 justify-between items-center md:items-start space-y-6 md:space-y-0 md:space-x-12 text-center md:text-left">
         <motion.div className="w-full md:w-2/3" variants={fadeIn}>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-start">
             <img
               src="logo.svg"
               alt="Medulla Flashcards Logo"
-              className="h-14 w-auto"
+              className="h-22 w-72"
             />
           </div>
-          <p className="mt-3 text-sm md:text-lg leading-relaxed px-4 md:px-0">
+          <p className="mt-3 text-sm font-semibold md:text-lg leading-relaxed px-4 md:px-0">
             Medulla Flashcards offers a powerful, intuitive learning platform
             designed to help medical students master PG exam concepts with ease.
             With thousands of high-yield flashcards and active recall

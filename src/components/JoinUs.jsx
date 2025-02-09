@@ -53,13 +53,13 @@ const JoinUs = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="max-w-[1060px] lg:h-[460px] mx-auto lg:mx-0 lg:mr-auto p-6 bg-white shadow-lg rounded-lg border border-gray-200 mt-8 mb-10 lg:mb-36 flex flex-col lg:flex-row items-center lg:items-start fade-in"
+      className="max-w-[1060px] lg:h-[460px] mx-auto lg:mx-0 lg:mr-auto p-6 bg-white shadow-lg rounded-lg border border-gray-200 mt-8 mb-10 lg:mb-36 flex flex-col lg:flex-row items-center lg:items-start"
     >
       <div className="lg:w-1/2 flex justify-center items-start gap-2">
         <motion.img
           src="join-1.png"
           alt="Medulla Plus Subscription"
-          className="join-image w-40 md:w-56 lg:w-[410px] lg:h-[500px] drop-shadow-lg fade-in"
+          className="join-image w-40 md:w-56 lg:w-[420px] lg:h-[500px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-15, 0, -15] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -72,7 +72,7 @@ const JoinUs = () => {
         <motion.img
           src="join-1.png"
           alt="Medulla Core Subscription"
-          className="join-image w-40 md:w-56 lg:w-[410px] lg:h-[500px] drop-shadow-lg fade-in"
+          className="join-image w-40 md:w-56 lg:w-[420px] lg:h-[500px] drop-shadow-lg fade-in"
           initial={{ y: 20 }}
           animate={{ y: [-15, 0, -15] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

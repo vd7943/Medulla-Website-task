@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [handleScroll]);
 
   return (
-    <motion.nav
+    <nav
       role="navigation"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -151,7 +151,7 @@ const Navbar = () => {
           </motion.button>
         </motion.div>
       )}
-    </motion.nav>
+    </nav>
   );
 };
 

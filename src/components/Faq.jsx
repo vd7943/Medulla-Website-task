@@ -13,7 +13,7 @@ const Faq = () => {
     <motion.section
       initial="hidden"
       animate="visible"
-      className="max-w-6xl mx-auto p-6 mt-8"
+      className="max-w-5xl mx-auto p-6 mt-8"
     >
       <motion.h2 className="text-4xl lg:text-5xl font-bold text-left text-blue-950 mb-6">
         FAQs
