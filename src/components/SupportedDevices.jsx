@@ -57,7 +57,7 @@ const SupportedDevices = () => {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-start font-semibold">
+      <div className="flex flex-col lg:flex-row items-start font-semibold">
         <ul
           className="list-disc list-inside text-gray-700 text-base md:text-lg space-y-2 text-left"
           initial="hidden"

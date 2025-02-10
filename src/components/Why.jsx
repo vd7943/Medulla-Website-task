@@ -50,7 +50,7 @@ const Why = () => {
       ref={sectionRef}
       className="max-w-[1020px] lg:h-[600px] mx-auto lg:mx-0 lg:ml-auto p-6 bg-white shadow-lg rounded-lg border border-gray-200 mt-8 mb-20 flex flex-col lg:flex-row items-center"
     >
-      <div className="lg:w-1/2 space-y-6 p-6 text-center lg:text-left fade-in">
+      <div className="lg:w-1/2 space-y-6 p-6 text-left fade-in">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 flex items-center justify-center gap-2">
           <span className="w-12 h-[2px] bg-blue-900"></span>
           Why Us

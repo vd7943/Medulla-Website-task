@@ -67,7 +67,7 @@ const Goal = () => {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      <motion.div className="w-full lg:w-1/2 px-4 text-center lg:text-left fade-in">
+      <motion.div className="w-full lg:w-1/2 px-4 text-left fade-in">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 flex items-center justify-center gap-2 lg:pb-10 pb-6">
           <span className="w-12 h-[2px] bg-blue-900"></span>
           Our Goal and Mission

@@ -51,8 +51,8 @@ const FeatureSection = () => {
       ref={sectionRef}
       className="max-w-5xl lg:h-[460px] mx-auto lg:mx-0 lg:ml-auto my-10 py-10 lg:py-0 sm:my-20 lg:mb-10 px-4 sm:px-8 flex flex-col lg:flex-row items-center bg-white rounded-lg"
     >
-      <div className="lg:w-1/2 space-y-6 lg:mr-10 text-center lg:text-left fade-in">
-        <FaHeart className="text-[#FF5033] text-3xl mx-auto lg:ml-4" />
+      <div className="lg:w-1/2 space-y-6 lg:mr-10 text-left fade-in">
+        <FaHeart className="text-[#FF5033] text-3xl mx-0 lg:mx-auto lg:ml-4" />
         <h2 className="text-2xl md:text-3xl font-bold lg:ps-4 text-blue-950 leading-snug">
           Unlike traditional methods, <br />
           this app focuses on:
@@ -87,7 +87,7 @@ const FeatureSection = () => {
         <motion.img
           src="feature-2.png"
           alt="Mockup 2"
-          className="mockup-image xl:mb-20 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-xl drop-shadow-lg fade-in"
+          className="hidden md:block mockup-image xl:mb-20 w-42 h-[480px] max-w-xs sm:max-w-sm md:max-w-xl drop-shadow-lg fade-in"
           initial={{ y: -20 }}
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
